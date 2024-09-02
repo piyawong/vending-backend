@@ -9,6 +9,9 @@ services:
       - '8089:8089'
     environment:
       - NODE_ENV=production
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
   db:
     image: postgres:13
     environment:

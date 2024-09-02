@@ -4,6 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { BookModule } from './book/book.module';
 import { DetectionRecordModule } from './detectionRecord/detectionRecord.module';
+import { WebsocketModule } from './websocket/websocket.module';
 
 @Module({
   imports: [
@@ -16,9 +17,12 @@ import { DetectionRecordModule } from './detectionRecord/detectionRecord.module'
       database: 'vending',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
+      migrationsRun: true,
+      migrations: [__dirname + '/migrations/**/*{.ts,.js}'],
     }),
     BookModule,
     DetectionRecordModule,
+    WebsocketModule,
   ],
   controllers: [AppController],
   providers: [AppService],
