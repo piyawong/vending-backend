@@ -26,7 +26,6 @@ export class DetectionRecordController {
     type: [DetectionRecord],
   })
   findAll(): Promise<DetectionRecord[]> {
-    console.log('findallza1');
     return this.detectionRecordService.findAll();
   }
 
