@@ -2,10 +2,9 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { BookModule } from './book/book.module';
 import { DetectionRecordModule } from './detectionRecord/detectionRecord.module';
 import { WebsocketModule } from './websocket/websocket.module';
-
+import { ProductModule } from './product/product.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -20,8 +19,8 @@ import { WebsocketModule } from './websocket/websocket.module';
       migrationsRun: true,
       migrations: [__dirname + '/migrations/**/*{.ts,.js}'],
     }),
-    BookModule,
     DetectionRecordModule,
+    ProductModule,
     WebsocketModule,
   ],
   controllers: [AppController],
