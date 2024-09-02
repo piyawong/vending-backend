@@ -1,0 +1,93 @@
+{
+  "info": {
+    "name": "Product CRUD",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Products",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8089/products",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8089",
+          "path": ["products"]
+        }
+      }
+    },
+    {
+      "name": "Get Product by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8089/products/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8089",
+          "path": ["products", "1"]
+        }
+      }
+    },
+    {
+      "name": "Create Product",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8089/products",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8089",
+          "path": ["products"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"New Product\",\n  \"price\": 19.99,\n  \"quantity\": 100\n}"
+        }
+      }
+    },
+    {
+      "name": "Update Product",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8089/products/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8089",
+          "path": ["products", "1"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Updated Product\",\n  \"price\": 24.99,\n  \"quantity\": 50\n}"
+        }
+      }
+    },
+    {
+      "name": "Delete Product",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:8089/products/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8089",
+          "path": ["products", "1"]
+        }
+      }
+    }
+  ]
+}
