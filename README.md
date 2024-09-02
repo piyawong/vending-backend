@@ -65,6 +65,16 @@ This will start both the NestJS application and a PostgreSQL database.
 - `PUT /books/:id`: Update a book
 - `DELETE /books/:id`: Delete a book
 
+## DetectionRecord API Endpoints
+
+- `GET /detection-records`: Fetch all detection records
+- `GET /detection-records/:id`: Fetch a specific detection record
+- `POST /detection-records`: Create a new detection record
+- `PUT /detection-records/:id`: Update a detection record
+- `DELETE /detection-records/:id`: Delete a detection record
+
+For more details on the DetectionRecord API, please refer to the controller files in the `src/detectionRecord` directory.
+
 For more details on the API, please refer to the controller files in the `src/book` directory.
 
 ## Contributing

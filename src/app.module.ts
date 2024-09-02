@@ -3,6 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { BookModule } from './book/book.module';
+import { DetectionRecordModule } from './detectionRecord/detectionRecord.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { BookModule } from './book/book.module';
       synchronize: true,
     }),
     BookModule,
+    DetectionRecordModule,
   ],
   controllers: [AppController],
   providers: [AppService],
