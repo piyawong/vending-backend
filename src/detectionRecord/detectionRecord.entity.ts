@@ -8,6 +8,10 @@ export class DetectionRecord {
   @PrimaryGeneratedColumn()
   id: number;
 
+  @ApiProperty({ description: 'The machine Id' })
+  @Column({ nullable: false, default: '' })
+  machineId: string;
+
   @ApiProperty({ description: 'The dwell time of the detection' })
   @Column('float', { nullable: false, default: 0 })
   @IsNumber()
